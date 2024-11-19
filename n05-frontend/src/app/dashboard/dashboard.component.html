@@ -1,1 +1,17 @@
-<p>dashboard works!</p>
+<div class="dashboard">
+  <h2>Dashboard</h2>
+
+  <section>
+    <h3>Topic Summary</h3>
+    <p>{{ topicSummary }}</p>
+    <p>
+      <strong>Reference:</strong>
+      <a [href]="referenceUrl" target="_blank">{{ referenceUrl }}</a>
+    </p>
+  </section>
+
+  <section>
+    <h3>Technical Details</h3>
+    <p>{{ techDetails }}</p>
+  </section>
+</div>

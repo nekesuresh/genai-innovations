@@ -1,0 +1,20 @@
+.dashboard {
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.dashboard h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dashboard section {
+  margin-bottom: 20px;
+}
+
+.dashboard a {
+  color: blue;
+  text-decoration: underline;
+}
