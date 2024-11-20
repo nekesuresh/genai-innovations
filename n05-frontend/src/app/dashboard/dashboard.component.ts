@@ -23,15 +23,9 @@ export class DashboardComponent implements OnInit {
     }
 
     // Set topic summary and reference URL
-    this.topicSummary = `Generative AI has seen remarkable advancements over the past six months,
-    particularly in text-to-image generation, AI art creation, and natural language processing (NLP).
-    Innovations such as OpenAI's GPT-4 and Google's Gemini have transformed the way machines interact
-    with humans. AI models are now capable of generating highly realistic images from simple text prompts,
-    allowing industries like advertising, gaming, and film production to leverage these tools for creative purposes.
-    Additionally, new tools like DALL-E 3 and MidJourney have gained traction in revolutionizing design workflows
-    and democratizing AI capabilities for creators globally.`;
+    this.topicSummary = `Generative AI has experienced a surge of innovation in recent months, driving advancements across various fields. A notable development is the emergence of reasoning AI models from China, rivaling OpenAI's GPT models in their capability to comprehend and process complex tasks. OpenAI continues to push boundaries with tools like ChatGPT, even releasing a teacher's guide to promote educational use. Google's Gemini chatbot has also made waves with its advanced memory capabilities, offering enhanced interactivity and adaptability. The technology has become increasingly practical, influencing industries such as design, media, and social platforms. Tools like Meta's AI integration into Ray-Ban glasses highlight AI's role in augmenting daily life, while companies like Moonvalley are developing ethical AI video models to address privacy and fairness concerns. Startups such as Norwegian Factiverse are tackling misinformation, showcasing AI's societal benefits. Generative AI is also drawing significant investments, with startups like Neural Magic and others raising millions to develop faster and more efficient AI infrastructure. These tools are democratizing creative processes, enabling applications like text-to-image generation and content moderation to improve accessibility and efficiency across industries. From AI-driven glasses to disinformation countermeasures, the evolution of generative AI reflects its transformative potential and highlights its expanding influence in the modern world.`;
 
-    this.referenceUrl = 'https://www.example.com/recent-generative-ai-news';
+    this.referenceUrl = ' https://techcrunch.com/tag/generative-ai/';
 
     // Set project technical details
     this.techDetails = `This project is built using Angular for the frontend, Node.js for the backend, and MySQL
