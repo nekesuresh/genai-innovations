@@ -1,8 +1,8 @@
 <nav>
-  <span style="margin-right: 10px;"><a routerLink="/dashboard" *ngIf="isLoggedIn()">Dashboard</a></span>
-  <span style="margin-right: 10px;"><a routerLink="/summary" *ngIf="isLoggedIn()">Summary</a></span>
-  <span style="margin-right: 10px;"><a routerLink="/reports" *ngIf="isLoggedIn()">Reports</a></span>
-  <button style="margin-left: 10px;" (click)="logout()" *ngIf="isLoggedIn()">Logout</button>
+  <a routerLink="/dashboard" style="margin-right: 10px;">Dashboard</a>
+  <a routerLink="/summary" style="margin-right: 10px;">Summary</a>
+  <a routerLink="/reports" style="margin-right: 10px;">Reports</a>
+  <button (click)="logout()" style="margin-left: 10px;">Logout</button>
 </nav>
 
 <router-outlet></router-outlet>
