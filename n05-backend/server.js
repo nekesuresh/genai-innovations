@@ -5,7 +5,7 @@ const authRoutes = require('./routes/auth');
 const chartRoutes = require('./routes/charts');
 const app = express();
 
-app.use('/api/charts', chartRoutes); // Add the charts route
+app.use('/api/charts', chartRoutes); 
 
 
 // Middleware
