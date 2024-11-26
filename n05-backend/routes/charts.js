@@ -9,8 +9,18 @@ router.get('/summary', (req, res) => {
       labels: ['January', 'February', 'March'],
       data: [10, 20, 30],
     };
-  
+   console.log(summaryChartData);
     res.json(summaryChartData); // Send the chart data as JSON
+  });
+
+  
+router.get('/reports', (req, res) => {
+    const summaryChartData1 = {
+      labels: ['January', 'February', 'March'],
+      data: [10, 20, 30],
+    };
+  
+    res.json(summaryChartData1); // Send the chart data as JSON
   });
   
 
