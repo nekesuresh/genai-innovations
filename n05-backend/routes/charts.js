@@ -6,8 +6,8 @@ const router = express.Router();
 
 router.get('/summary', (req, res) => {
     const summaryChartData = {
-      labels: ['January', 'February', 'March'],
-      data: [10, 20, 30],
+      labels: ['Banking', 'Insurance', 'Energy', 'Capital markets', 'Retail', 'Communication and Media'],
+      data: [54, 48, 43, 40, 34, 33],
     };
    console.log(summaryChartData);
     res.json(summaryChartData); // Send the chart data as JSON
