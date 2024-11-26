@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Chart } from 'chart.js/auto';
 
+// reference : https://explodingtopics.com/blog/generative-ai-stats
+
 @Component({
   selector: 'app-summary',
   templateUrl: './summary.component.html',
@@ -12,10 +14,9 @@ export class SummaryComponent implements OnInit {
     labels: [] as string[],
     datasets: [
       {
-        label: 'Chart Data',
         data: [] as number[],
-        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-        borderColor: 'rgba(54, 162, 235, 1)',
+        backgroundColor: 'blue', // Solid blue color
+        borderColor: 'blue', // Solid blue border
         borderWidth: 1,
       },
     ],
@@ -47,13 +48,53 @@ export class SummaryComponent implements OnInit {
     const ctx = document.getElementById('summaryChart') as HTMLCanvasElement;
 
     new Chart(ctx, {
-      type: 'pie', // You can change this to 'line', 'pie', etc., for different chart types
+      type: 'bar',
       data: this.chartData,
       options: {
         responsive: true,
+        maintainAspectRatio: false, 
         plugins: {
+          title: {
+            display: true,
+            text: 'Industries with the Highest Potential for Automation', // Chart title
+            font: {
+              size: 18, // Adjust font size
+              weight: 'bold', // Optional: Make the title bold
+            },
+            color: 'black', // Black text for the title
+          },
           legend: {
-            position: 'top',
+            display: false, // Remove the label for the color
+          },
+        },
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Industry', // X-axis title
+              font: {
+                size: 14,
+                weight: 'bold',
+              },
+              color: 'black', // Black text for X-axis title
+            },
+            ticks: {
+              color: 'black', // Black text for X-axis ticks
+            },
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Percentage of Jobs', // Y-axis title
+              font: {
+                size: 14,
+                weight: 'bold',
+              },
+              color: 'black', // Black text for Y-axis title
+            },
+            ticks: {
+              color: 'black', // Black text for Y-axis ticks
+            },
           },
         },
       },
