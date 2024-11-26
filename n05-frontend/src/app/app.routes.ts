@@ -8,11 +8,11 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './guards/auth.guard'; // Import the guard
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'summary', component: SummaryComponent, canActivate: [AuthGuard] },
-  { path: 'reports', component: ReportsComponent, canActivate: [AuthGuard] },
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Default route redirects to login
+  { path: 'login', component: LoginComponent }, // Login route
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }, // Dashboard route with guard
+  { path: 'summary', component: SummaryComponent, canActivate: [AuthGuard] }, // Summary route with guard
+  { path: 'reports', component: ReportsComponent, canActivate: [AuthGuard] }, // Reports route with guard
 ];
 
 @NgModule({

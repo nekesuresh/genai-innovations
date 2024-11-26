@@ -1,53 +1,62 @@
 {
-  "hash": "3ab49d48",
-  "configHash": "2e80b35a",
-  "lockfileHash": "a347b8a7",
-  "browserHash": "40c2ad32",
+  "hash": "288493f0",
+  "configHash": "80f6d68b",
+  "lockfileHash": "61afae36",
+  "browserHash": "d03bd9ba",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "f62ba0fd",
+      "fileHash": "b479e5fe",
       "needsInterop": false
     },
     "@angular/common/http": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
-      "fileHash": "a8f35fe2",
+      "fileHash": "25c4e802",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "15528b02",
+      "fileHash": "2cbf38e7",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "fe03f13b",
+      "fileHash": "06b8948d",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "0a3c5c46",
+      "fileHash": "47621e8f",
       "needsInterop": false
     },
     "@angular/platform-server": {
       "src": "../../../../../../node_modules/@angular/platform-server/fesm2022/platform-server.mjs",
       "file": "@angular_platform-server.js",
-      "fileHash": "d30a6b74",
+      "fileHash": "a2d11985",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "7c838bac",
+      "fileHash": "d2ea63a0",
+      "needsInterop": false
+    },
+    "chart.js/auto": {
+      "src": "../../../../../../node_modules/chart.js/auto/auto.js",
+      "file": "chart__js_auto.js",
+      "fileHash": "6e0d03fa",
       "needsInterop": false
     }
   },
   "chunks": {
+    "xhr2-ISERFGGE": {
+      "file": "xhr2-ISERFGGE.js"
+    },
     "chunk-7LYRAPH3": {
       "file": "chunk-7LYRAPH3.js"
     },
@@ -59,9 +68,6 @@
     },
     "chunk-44JQ5FZC": {
       "file": "chunk-44JQ5FZC.js"
-    },
-    "xhr2-ISERFGGE": {
-      "file": "xhr2-ISERFGGE.js"
     },
     "chunk-NQ4HTGF6": {
       "file": "chunk-NQ4HTGF6.js"

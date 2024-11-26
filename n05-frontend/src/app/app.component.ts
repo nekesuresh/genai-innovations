@@ -15,6 +15,7 @@ export class AppComponent {
     title = 'n05-frontend';
     constructor(private router: Router) {}
 
+
     isLoggedIn(): boolean {
         return !!localStorage.getItem('token'); // Check if a token exists
     }
