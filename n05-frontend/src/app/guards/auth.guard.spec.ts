@@ -25,29 +25,26 @@ describe('AuthGuard', () => {
   });
 
   it('should allow navigation if the user is authenticated', () => {
-    // Simulate an authenticated user
     spyOn(localStorage, 'getItem').and.returnValue('mock-token');
 
     const canActivate = guard.canActivate();
 
-    expect(canActivate).toBeTrue(); // Navigation allowed
-    expect(routerSpy.navigate).not.toHaveBeenCalled(); // No redirect
+    expect(canActivate).toBeTrue();
+    expect(routerSpy.navigate).not.toHaveBeenCalled();
   });
 
   it('should block navigation and redirect to login if the user is not authenticated', () => {
-    // Simulate an unauthenticated user
     spyOn(localStorage, 'getItem').and.returnValue(null);
 
     const canActivate = guard.canActivate();
 
-    expect(canActivate).toBeFalse(); // Navigation blocked
-    expect(routerSpy.navigate).toHaveBeenCalledWith(['/login']); // Redirect to login
+    expect(canActivate).toBeFalse();
+    expect(routerSpy.navigate).toHaveBeenCalledWith(['/login']);
   });
 
   it('should display an alert when redirecting to login', () => {
-    // Simulate an unauthenticated user
     spyOn(localStorage, 'getItem').and.returnValue(null);
-    spyOn(window, 'alert'); // Spy on window.alert
+    spyOn(window, 'alert'); 
 
     guard.canActivate();
 

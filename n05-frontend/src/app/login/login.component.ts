@@ -12,9 +12,9 @@ import { Router } from '@angular/router';
   imports: [CommonModule, FormsModule],
 })
 export class LoginComponent {
-  username: string = ''; // Two-way bound to the input field
-  password: string = ''; // Two-way bound to the input field
-  errorMessage: string = ''; // Used to display login errors
+  username: string = '';
+  password: string = '';
+  errorMessage: string = '';
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -24,9 +24,7 @@ export class LoginComponent {
     this.http.post<{ token: string }>('http://localhost:3000/api/auth/login', loginData)
       .subscribe({
         next: (response) => {
-          // Save JWT token in local storage
           localStorage.setItem('token', response.token);
-          // Navigate to the dashboard
           this.router.navigate(['/dashboard']);
         },
         error: () => {

@@ -10,7 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReportsComponent } from './reports/reports.component';
 import { SummaryComponent } from './summary/summary.component';
-import { routes } from './app.routes'; // Import your routes
+import { routes } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -22,11 +22,10 @@ import { routes } from './app.routes'; // Import your routes
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes), // Configure routes here
-    FormsModule, // Required for [(ngModel)]
-    //HttpClientModule, // Required for HTTP communication
+    RouterModule.forRoot(routes),
+    FormsModule,
   ],
  providers: [provideHttpClient()],
- bootstrap: [AppComponent], // Bootstrap the AppComponent
+ bootstrap: [AppComponent], 
 })
 export class AppModule {}

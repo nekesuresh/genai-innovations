@@ -17,14 +17,14 @@ export class ReportsComponent implements OnInit {
       {
         data: [] as number[],
         backgroundColor: [
-          '#FF6384', // Light pink
-          '#36A2EB', // Light blue
-          '#FFCE56', // Yellow
-          '#4BC0C0', // Teal
-          '#9966FF', // Light purple
-          '#FF9F40', // Orange
+          '#FF6384', 
+          '#36A2EB',
+          '#FFCE56',
+          '#4BC0C0',
+          '#9966FF',
+          '#FF9F40',
         ],
-        borderColor: '#fff', // White borders between segments
+        borderColor: '#fff',
         borderWidth: 1,
       },
     ],
@@ -34,18 +34,16 @@ export class ReportsComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     try {
-      // Fetch data from the backend
       const response = await this.http
         .get<{ labels: string[]; data: number[] }>('http://localhost:3000/api/charts/reports')
         .toPromise();
 
-      // Process the response and populate the chartData
       if (response) {
         this.chartData.labels = response.labels;
         this.chartData.datasets[0].data = response.data;
       }
 
-      // Render the chart
+
       this.renderChart();
     } catch (error) {
       console.error('Error fetching chart data:', error);
@@ -64,17 +62,17 @@ export class ReportsComponent implements OnInit {
         plugins: {
           title: {
             display: true,
-            text: 'Percentage of overall generative AI Market Share', // Chart title
+            text: 'Percentage of overall generative AI Market Share',
             font: {
-              size: 18, // Adjust font size
-              weight: 'bold', // Optional: Make the title bold
+              size: 18,
+              weight: 'bold',
             },
-            color: 'black', // Black text for the title
+            color: 'black',
           },
           legend: {
-            position: 'bottom', // Position the legend at the bottom
+            position: 'bottom',
             labels: {
-              color: 'black', // Black text for legend labels
+              color: 'black',
               font: {
                 size: 12,
               },

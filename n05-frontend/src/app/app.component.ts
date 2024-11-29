@@ -17,11 +17,11 @@ export class AppComponent {
 
 
     isLoggedIn(): boolean {
-        return !!localStorage.getItem('token'); // Check if a token exists
+        return !!localStorage.getItem('token');
     }
 
     logout() {
-        localStorage.removeItem('token'); // Remove the token
-        this.router.navigate(['/login']); // Redirect to Login
+        localStorage.removeItem('token');
+        this.router.navigate(['/login']); 
     }
 }

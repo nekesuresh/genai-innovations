@@ -21,7 +21,7 @@ input {
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box; /* Make sure padding doesn't affect width */
+  box-sizing: border-box;
 }
 
 button {
@@ -42,5 +42,5 @@ button:hover {
 .error {
   color: red;
   font-size: 14px;
-  text-align: center; /* Center error messages */
+  text-align: center;
 }

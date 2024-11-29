@@ -13,9 +13,9 @@ describe('LoginComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [LoginComponent],
       imports: [
-        HttpClientTestingModule, // For mocking HTTP requests
-        RouterTestingModule,    // For testing navigation
-        FormsModule,            // For ngModel binding
+        HttpClientTestingModule,
+        RouterTestingModule,
+        FormsModule,         
       ],
     }).compileComponents();
 
