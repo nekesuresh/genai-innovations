@@ -19,12 +19,10 @@ app.use((req,res,next)=>{
 })
 
 
-// Middleware
-app.use(cors()); // Allow cross-origin requests
-app.use(bodyParser.json()); // Parse JSON bodies
+app.use(cors()); 
+app.use(bodyParser.json());
 app.use('/api/charts', chartRoutes); 
-// Routes
-app.use('/api/auth', authRoutes); // Add the login route
+app.use('/api/auth', authRoutes); 
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

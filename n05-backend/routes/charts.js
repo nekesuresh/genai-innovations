@@ -10,7 +10,7 @@ router.get('/summary', (req, res) => {
       data: [54, 48, 43, 40, 34, 33],
     };
    console.log(summaryChartData);
-    res.json(summaryChartData); // Send the chart data as JSON
+    res.json(summaryChartData);
   });
 
   
@@ -20,7 +20,7 @@ router.get('/reports', (req, res) => {
       data: [41,26,3,22,8],
     };
     console.log(summaryChartData1);
-    res.json(summaryChartData1); // Send the chart data as JSON
+    res.json(summaryChartData1);
   });
   
 

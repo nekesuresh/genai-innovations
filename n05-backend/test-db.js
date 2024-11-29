@@ -1,11 +1,10 @@
-const db = require('./config/db'); // Import the database connection
+const db = require('./config/db'); 
 
-// Test the database connection by querying for tables
 db.query('SHOW TABLES', (err, results) => {
     if (err) {
-        console.error('Error running query:', err); // Log any errors
+        console.error('Error running query:', err);
     } else {
-        console.log('Tables in the database:', results); // Log the tables
+        console.log('Tables in the database:', results); 
     }
-    db.end(); // Close the connection after the query
+    db.end(); 
 });
