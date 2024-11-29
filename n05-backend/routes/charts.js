@@ -16,31 +16,12 @@ router.get('/summary', (req, res) => {
   
 router.get('/reports', (req, res) => {
     const summaryChartData1 = {
-      labels: ['January', 'February', 'March'],
-      data: [10, 20, 30],
+      labels: ['North America', 'Europe', 'Middle East and North Africa', 'Asia Pacific', 'Latin America'],
+      data: [41,26,3,22,8],
     };
-  
+    console.log(summaryChartData1);
     res.json(summaryChartData1); // Send the chart data as JSON
   });
   
-
-// Example chart data
-/*router.get('/chart1', authMiddleware, (req, res) => {
-    const chartData = [
-        { label: 'January', value: 100 },
-        { label: 'February', value: 120 },
-        { label: 'March', value: 90 },
-    ];
-    res.json(chartData);
-});
-
-router.get('/chart2', authMiddleware, (req, res) => {
-    const chartData = [
-        { category: 'Category A', value: 50 },
-        { category: 'Category B', value: 75 },
-        { category: 'Category C', value: 100 },
-    ];
-    res.json(chartData); // Send the second chart data
-});*/
 
 module.exports = router;
