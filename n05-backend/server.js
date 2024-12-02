@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const authRoutes = require('./routes/auth');
@@ -6,6 +7,11 @@ const chartRoutes = require('./routes/charts');
 const app = express();
 
 
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/api/hello', (req, res) => {
+    res.send({ message: 'Hello from API!' });
+  });
 
 
 app.use((req,res,next)=>{
