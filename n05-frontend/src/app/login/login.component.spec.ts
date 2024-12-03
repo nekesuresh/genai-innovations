@@ -50,7 +50,7 @@ describe('LoginComponent', () => {
 
     component.onSubmit();
 
-    const req = httpMock.expectOne('http://localhost:3000/api/auth/login');
+    const req = httpMock.expectOne('http://134.122.7.165:3000/api/auth/login');
     req.flush('Unauthorized', { status: 401, statusText: 'Unauthorized' });
 
     expect(component.errorMessage).toBe('Invalid username or password');
