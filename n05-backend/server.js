@@ -7,10 +7,22 @@ const chartRoutes = require('./routes/charts');
 const app = express();
 
 
-app.use(express.static(path.join(__dirname, 'public')));
+const browserAppPath = path.join(__dirname, 'public/n05-frontend/browser');
+
+ 
+
+// Serve static assets like JS, CSS, and images with proper MIME types
+
+app.use(express.static(browserAppPath));
+
+ 
+
+// Catch-all route to serve index.html for all non-asset requests
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/n05-frontend/browser', 'index.csr.html'));
+
+    res.sendFile(path.join(browserAppPath, 'index.csr.html'));
+
 });
 
 
