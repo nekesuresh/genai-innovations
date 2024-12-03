@@ -35,7 +35,7 @@ describe('LoginComponent', () => {
 
     component.onSubmit();
 
-    const req = httpMock.expectOne('http://localhost:3000/api/auth/login');
+    const req = httpMock.expectOne('http://134.122.7.165:3000/api/auth/login');
     expect(req.request.method).toBe('POST');
     expect(req.request.body).toEqual({ username: 'testuser', password: 'testpassword' });
 
