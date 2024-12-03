@@ -35,7 +35,7 @@ export class ReportsComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     try {
       const response = await this.http
-        .get<{ labels: string[]; data: number[] }>('http://localhost:3000/api/charts/reports')
+        .get<{ labels: string[]; data: number[] }>('http://134.122.7.165:3000/api/charts/reports'')
         .toPromise();
 
       if (response) {
