@@ -6,6 +6,11 @@ const authRoutes = require('./routes/auth');
 const chartRoutes = require('./routes/charts');
 const app = express();
 
+app.use(cors()); 
+app.use(bodyParser.json());
+app.use('/api/charts', chartRoutes); 
+app.use('/api/auth', authRoutes); 
+
 
 const browserAppPath = path.join(__dirname, 'public/n05-frontend/browser');
 
@@ -36,11 +41,6 @@ app.use((req,res,next)=>{
 
 })
 
-
-app.use(cors()); 
-app.use(bodyParser.json());
-app.use('/api/charts', chartRoutes); 
-app.use('/api/auth', authRoutes); 
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
